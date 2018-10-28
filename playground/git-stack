@@ -1,0 +1,3 @@
+#!/bin/bash
+
+python $PWD/playground/stackexchange-test.py | $PAGER

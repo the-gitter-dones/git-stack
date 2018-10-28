@@ -1,18 +1,11 @@
-import stackexchange
+import api
+import os
+import subprocess
+
+from api import Api
+from subprocess import call
 
 search_term = "git reset"
-so = stackexchange.Site(stackexchange.StackOverflow)
 
-question = so.question(2530060)
-
-print(question.title)
-try:
-    print(question.body)
-except:
-    pass
-
-for answer in question.answers:
-    print(answer)
-    print()
-
-# search_results = so.search(intitle=search_term)
+answ = Api().get_top_answer(search_term)
+print(answ)
